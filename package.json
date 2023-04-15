@@ -1,0 +1,32 @@
+{
+  "name": "vue-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./bin/index.js",
+    "dev:web": "cd ./web && yarn dev",
+    "dev:server": "cd ./server && yarn dev",
+    "lint:web": "cd ./web && yarn",
+    "lint:server": "cd ./server && yarn",
+    "bootstrap": "concurrently \"npm run lint:web\" \"npm run lint:server\"",
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:server\""
+  },
+  "bin": {
+    "bootstrap": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiao-nice/vue-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiao-nice/vue-node/issues"
+  },
+  "homepage": "https://github.com/xiao-nice/vue-node#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
