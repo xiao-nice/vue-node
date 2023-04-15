@@ -12,7 +12,7 @@ const instance: AxiosInstance = axios.create({
   headers: {
     'Content-Type': 'application/json;charset=UTF-8',
   }
-});
+})
 
 instance.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   const { getToken } = useUserStroe()
